@@ -4,6 +4,10 @@ function Table({ data }) {
   if (!data.length) return <h1>Loading</h1>;
   const tableHeadings = Object.keys(data[0]);
 
+  const headingTypeNumber = tableHeadings.filter(
+    (heading) => typeof heading === Number
+  );
+
   return (
     <div className='container center '>
       <h1 style={{ textAlign: "center" }}>Table</h1>
